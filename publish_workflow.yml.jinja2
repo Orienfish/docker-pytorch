@@ -15,8 +15,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: docker/build-push-action@v1
       with:
-        username: {% raw %}${{ secrets.DOCKER_USERNAME }}{% endraw %}
-        password: {% raw %}${{ secrets.DOCKER_PASSWORD }}{% endraw %}
+        username: {% raw %}${{ secrets.DOCKER_HUB_USERNAME }}{% endraw %}
+        password: {% raw %}${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}{% endraw %}
         repository: {{ repository }}
         tags: {{ tags | join(',') }}
         path: {{ dockerfile_dir }}

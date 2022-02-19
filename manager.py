@@ -5,7 +5,7 @@ import yaml
 from pathlib import Path
 
 
-DOCKER_REPOSITORY = 'anibali/pytorch'
+DOCKER_REPOSITORY = 'orienfish/pytorch'
 
 
 def main():

@@ -1,4 +1,5 @@
 1.10.2-cuda11.3-ubuntu20.04:
+  deprecated: true
   extra_tags:
   - 1.10.2-cuda11.3
   - latest
@@ -19,6 +20,7 @@
       - tqdm=4.62.3
 
 1.10.2-nocuda-ubuntu20.04:
+  deprecated: true
   extra_tags:
   - 1.10.2-nocuda
   template:
@@ -37,6 +39,7 @@
       - tqdm=4.62.3
 
 1.10.0-cuda11.3-ubuntu20.04:
+  deprecated: true
   extra_tags:
   - 1.10.0-cuda11.3
   template:
@@ -55,6 +58,7 @@
       - tqdm=4.62.3
 
 1.10.0-nocuda-ubuntu20.04:
+  deprecated: true
   extra_tags:
   - 1.10.0-nocuda
   template:
@@ -72,6 +76,7 @@
       - tqdm=4.62.3
 
 1.8.1-cuda11.1-ubuntu20.04:
+  deprecated: true
   extra_tags:
   - 1.8.1-cuda11.1
   template:
@@ -87,6 +92,7 @@
          && conda clean -ya
 
 1.7.0-cuda11.0-ubuntu20.04:
+  deprecated: true
   extra_tags:
   - 1.7.0-cuda11.0
   template:
@@ -102,6 +108,7 @@
          && conda clean -ya
 
 1.5.0-cuda10.2-ubuntu18.04:
+  deprecated: true
   extra_tags:
   - 1.5.0-cuda10.2
   template:
@@ -117,6 +124,7 @@
          && conda clean -ya
 
 1.5.0-cuda9.2-ubuntu18.04:
+  deprecated: true
   extra_tags:
   - 1.5.0-cuda9.2
   template:
@@ -132,6 +140,7 @@
          && conda clean -ya
 
 1.5.0-nocuda-ubuntu18.04:
+  deprecated: true
   extra_tags:
   - 1.5.0-nocuda
   template:
@@ -148,6 +157,7 @@
          && conda clean -ya
 
 1.4.0-cuda10.1-ubuntu16.04:
+  deprecated: true
   extra_tags:
   - 1.4.0-cuda10.1
   template:
@@ -163,6 +173,7 @@
          && conda clean -ya
 
 1.4.0-cuda9.2-ubuntu16.04:
+  deprecated: true
   extra_tags:
   - 1.4.0-cuda9.2
   template:
@@ -178,6 +189,7 @@
          && conda clean -ya
 
 1.4.0-nocuda-ubuntu16.04:
+  deprecated: true
   extra_tags:
   - 1.4.0-nocuda
   template:
