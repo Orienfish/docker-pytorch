@@ -102,7 +102,6 @@
          && conda clean -ya
 
 1.5.0-cuda10.2-ubuntu18.04:
-  deprecated: true
   extra_tags:
   - 1.5.0-cuda10.2
   template:
@@ -118,7 +117,6 @@
          && conda clean -ya
 
 1.5.0-cuda9.2-ubuntu18.04:
-  deprecated: true
   extra_tags:
   - 1.5.0-cuda9.2
   template:
@@ -134,7 +132,6 @@
          && conda clean -ya
 
 1.5.0-nocuda-ubuntu18.04:
-  deprecated: true
   extra_tags:
   - 1.5.0-nocuda
   template:
@@ -151,7 +148,6 @@
          && conda clean -ya
 
 1.4.0-cuda10.1-ubuntu16.04:
-  deprecated: true
   extra_tags:
   - 1.4.0-cuda10.1
   template:
@@ -167,7 +163,6 @@
          && conda clean -ya
 
 1.4.0-cuda9.2-ubuntu16.04:
-  deprecated: true
   extra_tags:
   - 1.4.0-cuda9.2
   template:
@@ -183,7 +178,6 @@
          && conda clean -ya
 
 1.4.0-nocuda-ubuntu16.04:
-  deprecated: true
   extra_tags:
   - 1.4.0-nocuda
   template:
@@ -198,3 +192,42 @@
             "pytorch=1.4.0=py3.6_cpu_0" \
             "torchvision=0.5.0=py36_cpu" \
          && conda clean -ya
+
+stam-ubuntu16.04:
+  extra_tags:
+  - 1.4.0-nocuda
+  template:
+    path: templates/ubuntu16.04.dockerfile.jinja2
+    vars:
+      base_image: ubuntu:16.04
+      additional_steps: |-
+        # No CUDA-specific steps
+        ENV NO_CUDA=1
+        RUN conda install -y -c pytorch \
+            cpuonly \
+            "pytorch=1.4.0=py3.6_cpu_0" \
+            "torchvision=0.5.0=py36_cpu" \
+         && conda clean -ya
+        RUN python3 -m pip install imageio==2.8.0 \
+          Keras==2.3.1 \
+          kmodes==0.10.2 \
+          matplotlib==3.2.1 \
+          networkx==2.4 \
+          numpy==1.18.4 \
+          opencv-python==4.2.0.32 \
+          pandas==1.0.1 \
+          Pillow==7.1.2 \
+          progressbar33==2.4 \
+          pylint==2.5.2 \
+          PyYAML==5.3 \
+          quadprog \
+          requests==2.18.4 \
+          scikit-learn==0.22.2.post1 \
+          scipy==1.4.1 \
+          seaborn==0.10.0 \
+          tensorboard==1.14.0 \
+          torch==1.4.0 \
+          torchvision==0.5.0 \
+          tqdm==4.43.0 \
+          scikit-image \
+          numba==0.50.0
